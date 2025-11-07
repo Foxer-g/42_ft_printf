@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 14:21:14 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/05 19:29:25 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/07 14:47:26 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -17,17 +17,17 @@ static int	ft_misc(char *str, void *arg, int *len)
 
 	out = 1;
 	if (*str == 'c')
-		out = ft_putchar_f((char *)*arg, len);
+		out = ft_putchar_f((char)*arg, len);
 	else if (*str == 's')
 		out = ft_putstr_f((char *)arg, len);
-	else if (*str == 'p' || *str == 'x')
-		out = ft_puthexa_f((int)arg, len);
+	else if (*str == 'X' || *str == 'x')
+		out = ft_puthexa_f((int)*arg, len, *str == 'X');
 	else if (*str == 'd' || *str == 'i')
 		out = ft_putnbr_f((int)*arg, len);
 	else if (*str == 'u')
-		out = ft_putunbr_f((unsigned int)arg, len);
-	else if (*str == 'X')
-		out = ft_puthexacaps_f(()arg, len);
+		out = ft_putunbr_f((unsigned int)*arg, len);
+	else if (*str == 'p')
+		out = ft_puthexa_f((int)arg, len,);
 	else
 		str--;
 	str++;
