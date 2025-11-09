@@ -6,11 +6,11 @@
 /*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 18:02:32 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/07 10:02:35 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/09 10:42:35 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putnbr_f(int n, int *len)
 {

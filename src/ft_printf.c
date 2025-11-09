@@ -6,10 +6,10 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 14:21:14 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/07 14:47:26 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/09 10:41:23 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 static int	ft_misc(char *str, void *arg, int *len)
 {
