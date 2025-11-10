@@ -7,6 +7,7 @@ OBJ = $(OBJDIR)ft_printf.o\
 	$(OBJDIR)ft_putstr_f.o\
 	$(OBJDIR)ft_puthexa_f.o\
 	$(OBJDIR)ft_putnbr_f.o\
+	$(OBJDIR)ft_putunbr_f.o\
 
 all : $(NAME)
 
