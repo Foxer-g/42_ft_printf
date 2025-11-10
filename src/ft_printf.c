@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 14:21:14 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/09 10:41:23 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/10 11:17:32 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
@@ -17,7 +17,7 @@ static int	ft_misc(char *str, void *arg, int *len)
 
 	out = 1;
 	if (*str == 'c')
-		out = ft_putchar_f((char)*arg, len);
+		out = ft_putchar_f((int)arg, len);
 	else if (*str == 's')
 		out = ft_putstr_f((char *)arg, len);
 	else if (*str == 'X' || *str == 'x')
@@ -52,7 +52,7 @@ int	ft_printf(const char *str, ...)
 		else if (*str == '%')
 		{
 			str++;
-			ft_misc(str, va_args(args, void), len);
+			ft_misc((char *)str, va_arg(args, void *), len);
 		}
 		else
 			str += ft_putchar(*str, len);
