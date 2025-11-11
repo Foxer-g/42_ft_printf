@@ -6,7 +6,7 @@
 /*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 18:03:39 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/10 19:39:41 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:42:49 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_putstr_f(char *arg)
 
 	i = 0;
 	out = 0;
+	if (!arg)
+		return (ft_putstr_f("(null)"));
 	while (arg[i])
 	{
 		out += ft_putchar_f(arg[i]);
