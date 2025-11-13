@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 14:21:14 by toespino          #+#    #+#             */
-/*   Updated: 2025/11/11 18:01:20 by toespino         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:48:19 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../ft_printf.h"
@@ -50,6 +50,8 @@ int	ft_printf(const char *str, ...)
 		if (*str == '%')
 		{
 			len += ft_misc((char *)str + 1, args);
+			if (!(*(str + 1)))
+				break ;
 			str += 2;
 		}
 		else
